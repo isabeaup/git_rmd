@@ -1,0 +1,52 @@
+---
+title: "Leach's storm petrel data"
+subtitle: "From the raw data to cleaned and prepared dataset" 
+author: "Isabeau Pratte"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    toc: yes
+    fig_caption: true
+    number_sections: false
+    citation_package: natbib
+  bookdown::html_document2:
+    theme: lumen
+    toc: yes
+    toc_float: true
+    fig_caption: true
+    number_sections: false
+monofont: Calibri Light
+mathfont: Calibri Light
+sansfont: Calibri Light
+mainfont: Calibri Light
+header-includes:
+  \usepackage{fvextra}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+
+---
+<style type="text/css">
+
+body, td {
+   font-size: 20px;
+}
+code.r{
+  font-size: 16px;
+}
+pre {
+  font-size: 16px
+}
+</style>
+
+
+
+This script is the work flow I followed to get cleaned and prepared dataset from the original raw (.pos) data. 
+
+
+```{r setup, include=T,echo = T, message = F, warning = F}
+# Setup the directory
+require("knitr")
+knitr::opts_chunk$set(echo = T, eval = T, include = F, message = F, warning = F, tidy = T, tidy.opts = list(width.cutoff = 80))
+opts_chunk$set(root.dir = "C:/Users/PratteI/Documents/Leach's storm-petrel/For the Google Drive")
+opts_knit$set(root.dir = "C:/Users/PratteI/Documents/Leach's storm-petrel/For the Google Drive")
+```
